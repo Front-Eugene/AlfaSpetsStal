@@ -13,6 +13,59 @@
     --radius: 10px;
 }
 
+body {
+    background: #efeff0;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: var(--radius);
+    backdrop-filter: blur(10px);
+    background: #00000096;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.menu-btn div {
+    height: 4px;
+    width: 100%;
+    background: var(--color-title);
+    border-radius: 2px;
+    transition: 0.4s;
+    position: relative;
+}
+
+.menu-list {
+    transition: 1s all ease;
+}
+
+.menu-list.active {
+    z-index: 900;
+    right: 0;
+    background: url(../img/logo-2.png) center center/cover no-repeat;
+}
+
+.menu-btn.active div:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+}
+
+.menu-btn.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active div:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
+}
+
 @font-face {
   font-family: 'play-r';
   src: url('src/fonts/play/play-r.woff2') format('woff2');
@@ -28,8 +81,20 @@
   font-display: swap;
 }
 
+/* Для всех браузеров */
+html,
 body {
-    background: #efeff0;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE и Edge */
+}
+
+/* Для WebKit браузеров (Chrome, Safari) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+    /* Отключаем скроллбар */
 }
 
 /* ОБЩИЕ КЛАССЫ */
@@ -114,6 +179,10 @@ header .item-wrap {
     display: flex;
 }
 
+nav {
+    position: relative;
+}
+
 nav ul {
     display: flex;
     color: var(--color-bg);
@@ -154,8 +223,29 @@ nav ul li a {
 }
 
 #accorderon {
+    margin: 30px 0;
     display: block;
     position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 200px;
+    background: #ffffff;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10); */
+    padding: 0 20px;
+}
+
+#accorderon li {
+    margin: 20px 0;
+}
+
+#accorderon li a {
+    font-size: 20px;
+    color: #000;
+}
+
+#accorderon li a:hover {
+    color: var(--color-title);
 }
 
 details summary {
@@ -185,8 +275,21 @@ details summary::after {
   vertical-align: middle;
 }
 
+details[open] ~ .screen-text { 
+    position: static; 
+}
+
 details[open] summary::after {
   transform: translateY(-50%) rotate(-180deg); /* стрелка вверх при открытии */
+}
+
+details[open] #accorderon {
+    animation: fadeIn 0.18s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px);}
+    to { opacity: 1; transform: translateY(0);}
 }
 
 
@@ -772,3 +875,202 @@ footer .link:hover {
 }
 
 /* ПОДВАЛ */
+
+
+/* МЛБИЛКА */
+
+@media (max-width: 800px) {
+
+    .wrap {
+        padding: 0 10px;
+    }
+
+    .header-mob {
+        padding: 10px;
+    }
+
+    header .item-list {
+        display: block;
+        padding: 0;
+    }
+
+    header .item-wrap {
+        margin-bottom: 20px;
+    }
+
+    .screen {
+        padding: 200px 10px 0 10px;
+        margin-top: -270px;
+    }
+
+    nav ul {
+        position: fixed;
+        padding: 20px;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--color-text);
+        background: url(../img/bg.png) center center / cover no-repeat;
+        display: block;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    details summary::after {
+        left: 70px;
+    }
+
+    #accorderon {
+        top: 55px;
+        height: auto;
+    }
+
+    .screen-text {
+        width: 100%;
+    }
+
+    .title-main, .title-accent {
+        font-size: 25px;
+    }
+
+    .title-outline {
+        font-size: 25px;
+        -webkit-text-stroke: 1px var(--color-bg);
+        text-stroke: 1px var(--color-bg);
+    }
+
+    .screen-descr {
+        height: 0;
+        opacity: 0;
+        margin: 0;
+    }
+
+    .btn-more {
+        margin-left: 0;
+    }
+
+    .screen-btn {
+        margin: 10px 0;
+        display: block;
+        padding: 15px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .perks-wrap {
+        width: calc(100% - 20px);
+        position: relative;
+        padding: 20px 10px;
+    }
+
+    .perks .items-wrap {
+        flex-direction: column;
+    }
+
+    .items-wrap .item {
+        width: 100%;
+        padding: 30px 20px;
+        border: none;
+        border-bottom: 1px solid var(--color-title);
+    }
+
+    .perks {
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .about .img {
+        display: none;
+    }
+
+    .about .right {
+        width: 100%
+    }
+
+    .about .text {
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 30px !important;
+    }
+
+    .slider-wrap {
+        overflow: auto;
+    }
+
+    .slider-wrap .wrap {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .prev, .next {
+        display: none;
+    }
+
+    .uslugi-list .item {
+        width: 100%;
+    }
+
+    .review.wrap {
+        padding: 20px;
+    }
+
+    .review {
+        width: calc(100% - 40px);
+    }
+
+    .review-wrap .item {
+        width: 100%;
+    }
+
+    .review-text {
+        font-size: 15px;
+    }
+
+    .faq img {
+        display: none;
+    }
+
+    .faq-section {
+        width: calc(100% - 10px);
+    }
+
+    .contact {
+        width: calc(100% - 40px);
+    }
+
+    .contact-title {
+        flex-direction: column;
+    }
+
+    .contact-title .left {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .contact-title .right {
+        width: 100%;
+    }
+
+    .faq.wrap {
+        justify-content: center;
+    }
+
+    .faq-text {
+        width: 100%;
+    }
+
+    .footer {
+        width: calc(100% - 40px);
+        flex-wrap: wrap;
+        padding: 20px 10px;
+    }
+}
+
+/* МЛБИЛКА */
