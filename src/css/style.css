@@ -51,7 +51,6 @@ body {
 .menu-list.active {
     z-index: 900;
     right: 0;
-    display: flex;
     background: url(../img/logo-2.png) center center/cover no-repeat;
 }
 
@@ -881,6 +880,10 @@ footer .link:hover {
 /* МЛБИЛКА */
 
 @media (max-width: 800px) {
+
+    .menu-btn {
+        display: flex;
+    }
 
     .wrap {
         padding: 0 10px;
