@@ -27,7 +27,7 @@ body {
     border-radius: var(--radius);
     backdrop-filter: blur(10px);
     background: #00000096;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     gap: 8px;
@@ -51,6 +51,7 @@ body {
 .menu-list.active {
     z-index: 900;
     right: 0;
+    display: flex;
     background: url(../img/logo-2.png) center center/cover no-repeat;
 }
 
