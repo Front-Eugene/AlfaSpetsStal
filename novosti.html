@@ -13,11 +13,57 @@
 </head>
 
 <style>
-    .wrap.header-mob {
-        padding-bottom: 20px;
-        background: url(src/img/header-bg.jpg) center center/cover no-repeat;
-        background-position: bottom;
-    }
+
+.article-wrap {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.article-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px 0 rgba(34, 57, 99, 0.10);
+  padding: 26px 22px 22px 22px;
+  margin-bottom: 20px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  min-height: 210px;
+  transition: box-shadow 0.2s;
+}
+.article-card:hover {
+  box-shadow: 0 4px 16px 0 rgba(34, 57, 99, 0.18);
+}
+.article-card-title {
+  color: #222;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.article-card-desc {
+  color: #585858;
+  font-size: 15px;
+  margin-bottom: 28px;
+  flex: 1;
+}
+.article-card-link {
+  align-self: flex-start;
+  background: #ff4200;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.15s;
+  box-shadow: 0 2px 6px rgba(255,66,0,0.10);
+}
+.article-card-link:hover {
+  background: #dc3500;
+}
 </style>
 
 <div class="menu-btn">
@@ -158,9 +204,46 @@
                 скопированной с других интернет-ресурсов, о чем указано в рекомендациях Яндекса: «Мы стараемся не
                 индексировать или не ранжировать высоко сайты, копирующие информацию с других ресурсов и не создающие
                 оригинального контента или сервиса».
-
             </p>
 
+        </section>
+
+        <section class="wrap article-wrap">
+            <div class="article-card">
+                <div class="article-card-title">Заголовок статьи</div>
+                <div class="article-card-desc">Краткое описание статьи, чтобы заинтересовать посетителя и побудить перейти по ссылке.</div>
+                <a href="/news/poleznaya-statya-1" class="article-card-link">Читать дальше</a>
+            </div>
+
+            <div class="article-card">
+                <div class="article-card-title">Заголовок статьи</div>
+                <div class="article-card-desc">Краткое описание статьи, чтобы заинтересовать посетителя и побудить перейти по ссылке.</div>
+                <a href="/news/poleznaya-statya-1" class="article-card-link">Читать дальше</a>
+            </div>
+
+            <div class="article-card">
+                <div class="article-card-title">Заголовок статьи</div>
+                <div class="article-card-desc">Краткое описание статьи, чтобы заинтересовать посетителя и побудить перейти по ссылке.</div>
+                <a href="/news/poleznaya-statya-1" class="article-card-link">Читать дальше</a>
+            </div>
+
+            <div class="article-card">
+                <div class="article-card-title">Заголовок статьи</div>
+                <div class="article-card-desc">Краткое описание статьи, чтобы заинтересовать посетителя и побудить перейти по ссылке.</div>
+                <a href="/news/poleznaya-statya-1" class="article-card-link">Читать дальше</a>
+            </div>
+
+            <div class="article-card">
+                <div class="article-card-title">Заголовок статьи</div>
+                <div class="article-card-desc">Краткое описание статьи, чтобы заинтересовать посетителя и побудить перейти по ссылке.</div>
+                <a href="/news/poleznaya-statya-1" class="article-card-link">Читать дальше</a>
+            </div>
+
+            <div class="article-card">
+                <div class="article-card-title">Заголовок статьи</div>
+                <div class="article-card-desc">Краткое описание статьи, чтобы заинтересовать посетителя и побудить перейти по ссылке.</div>
+                <a href="/news/poleznaya-statya-1" class="article-card-link">Читать дальше</a>
+            </div>
         </section>
     </main>
 
