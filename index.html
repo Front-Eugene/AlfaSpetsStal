@@ -17,6 +17,26 @@
     <div></div>
 </div>
 
+<!-- Модальное окно -->
+<div class="modal" id="modal">
+  <div class="modal__overlay" id="modalOverlay"></div>
+  <div class="modal__content" id="modalContent">
+    <button class="modal__close" id="closeModalBtn">&times;</button>
+    <h2>Отправить заявку</h2>
+    <p>Оставьте заявку и наши менеджеры свяжутся с вами в течение 10 минут</p>
+    <form>
+      <input type="text" placeholder="Ваше имя:" name="name">
+      <input type="tel" placeholder="Телефон *" name="phone" required>
+      <div class="modal__checkbox">
+        <input type="checkbox" id="agree" required>
+        <label for="agree">Ознакомлен с <a href="soglahene.html">пользовательским соглашением</a></label>
+      </div>
+      <button type="submit" class="modal__submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+
 <body>
     <header class="wrap header-mob">
         <span class="item-list">
@@ -24,12 +44,12 @@
                 <div class="logo-wrap">
                     <img src="src/img/alfa-logo.png" alt="">
                 </div>
-                <span>
-                    <p>
+                <span style="display: flex; align-items: center;">
+                    <!-- <p>
                         АльфаСпецСталь
-                    </p>
+                    </p> -->
                     <p>
-                        Слоган
+                        Точность в каждой детали
                     </p>
                 </span>
             </span>
@@ -48,7 +68,7 @@
                         Мы находимся:
                     </p>
                     <address>
-                        г. Москва, ул. Ленинская, дом 0, корп 0, офис 0
+                        г. Минск, ул. Бабушкина, дом 48Д
                     </address>
                 </span>
             </span>
@@ -63,10 +83,12 @@
 
                 </span>
                 <span>
-                    <p class="contact-text">
+                    <!-- <p class="contact-text">
                         Звоните нам:
-                    </p>
-                    <a class="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+                    </p> -->
+                    <a class="phone" href="tel:+375291511051">+375 (29) 151-10-51</a>
+                    <a class="phone" style="display: block;"
+                        href="mailto:engineer@alfasteel.by">engineer@alfasteel.by</a>
                 </span>
             </span>
         </span>
@@ -74,7 +96,7 @@
         <nav>
             <ul class="menu-list">
                 <li>
-                    <a href="">
+                    <a href="/">
                         Главная
                     </a>
                 </li>
@@ -84,19 +106,19 @@
                         <summary>Услуги</summary>
                         <ul id="accorderon">
                             <li>
-                                <a href="">Разработка сайтов</a>
+                                <a href="uslugi.html">Все услуги</a>
                             </li>
                             <li>
-                                <a href="">SEO оптимизация</a>
+                                <a href="usluga-remont.html">Ремонт гидроцилиндров</a>
                             </li>
                             <li>
-                                <a href="">Контекстная реклама</a>
+                                <a href="usluga-metalloobrabotka.html">Металлообработка</a>
                             </li>
                             <li>
-                                <a href="">Сопровождение проектов</a>
+                                <a href="uslugi-vosstanovlenie.html">Восстановление подвижных и не подвижных соединений</a>
                             </li>
                             <li>
-                                <a href="">Консультации</a>
+                                <a href="uslugi-podbor.html">Подбор гидравлических уплотнений</a>
                             </li>
                         </ul>
                     </details>
@@ -109,19 +131,19 @@
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="about.html">
                         О компании
                     </a>
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="novosti.html">
                         Новости
                     </a>
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="contact.html">
                         Контакты
                     </a>
                 </li>
@@ -133,24 +155,34 @@
         <section class="screen wrap">
             <div class="shadow"></div>
             <div class="screen-text">
-                <p class="up-title">Металлообработка высочайшего качества</p>
+                <!-- <p class="up-title">Металлообработка высочайшего качества</p> -->
 
-                <h1>
+                <!-- <h1>
                     <span class="title-main">ПРОФЕССИОНАЛЬНАЯ</span>
                     <span class="title-outline">МЕТАЛЛО</span>
                     <span class="title-accent">ОБРАБОТКА</span>
-                </h1>
+                </h1> -->
 
+                <h2>
+                    <span class="title-main">Оперативные</span>
+                    <span class="title-outline">профессиональные</span>
+                    <span class="title-accent">качественные</span>
+                    <span class="title-accent">услуги по:</span>
+                </h2>
+                <p class="title-accent font-size" style="color: #e2e2e2;">
+                    - ремонту гидроцилиндров <br>
+                    - металлообработке <br>
+                    - восстановлению посадок подвижных и не подвижных соединений
+                </p>
 
                 <p class="screen-descr">
-                    Наш опыт, передовые технологии и индивидуальный подход к каждому клиенту делают нас лидерами в сфере
-                    металлообработки. Доверьте нам свои задачи, и мы обеспечим высочайшее качество.
+                    Наш опыт, передовые технологии и индивидуальный подход к каждому клиенту делают
+                    нас лидерами в сфере ремонта и обслуживания специальной, строительной,
+                    лесозаготовительной, сельскохозяйственной и коммунальной техники.
                 </p>
 
                 <div class="btn-wrap">
-                    <a href="">
-                        <button class="screen-btn btn">Оставить заявку</button>
-                    </a>
+                    <button class="screen-btn btn openModalBtn">Оставить заявку</button>
 
                     <a href="">
                         <button class="screen-btn btn btn-more">Подробнее</button>
@@ -172,9 +204,10 @@
                             </div>
                             <p>01</p>
                         </div>
-                        <p class="perks-title">Высокое качество</p>
+                        <p class="perks-title">Профессионализм</p>
                         <p class="perks-descr">
-                            Контроль качества на каждом этапе производства гарантирует соответствие высоким стандартам.
+                            Наш опыт исчисляется не только годами - но и мозгами, способными найти решение даже в
+                            критической ситуации.
                         </p>
                     </div>
 
@@ -185,9 +218,10 @@
                             </div>
                             <p>02</p>
                         </div>
-                        <p class="perks-title">Индивидуальный подход</p>
+                        <p class="perks-title">Оперативность</p>
                         <p class="perks-descr">
-                            Мы работаем с заказами любой сложности, тщательно изучаем требования клиентов.
+                            Мгновенная дефектовка с эффективными и адекватными методами устранения дефектов, быстрый
+                            ремонт/изготовление деталей.
                         </p>
                     </div>
 
@@ -198,9 +232,10 @@
                             </div>
                             <p>03</p>
                         </div>
-                        <p class="perks-title">Оперативность</p>
+                        <p class="perks-title">Индивидуальный подход</p>
                         <p class="perks-descr">
-                            Строго соблюдаем установленные сроки, чтобы ваши проекты реализовывались вовремя.
+                            Отсутствие некомпетентных менеджеров между клиентом и исполнителем. Все согласования,
+                            вопросы, требования - обсуждаются лично с ведущими профессионалами.
                         </p>
                     </div>
 
@@ -211,12 +246,14 @@
                             </div>
                             <p>04</p>
                         </div>
-                        <p class="perks-title">Доступные цены</p>
+                        <p class="perks-title">Надежность</p>
                         <p class="perks-descr">
-                            Гибкая система скидок и индивидуальный расчет позволяют подобрать оптимальное решение.
+                            Высокое качество используемых материалов и комплектующих.
+                            Контроль качества на каждом производственном этапе.
                         </p>
                     </div>
                 </div>
+                <p class="perks-descr-sub">Все это - инвестиция в наше взаимное, долгосрочное и перспективное будущее.</p>
             </div>
         </section>
 
@@ -228,15 +265,20 @@
                 <p class="up-title">О нас</p>
                 <h2>Немного <span class="color">о нас</span></h2>
                 <p class="text">
-                    Наша компания - это команда профессионалов в области металлообработки, с богатым опытом и
-                    стремлением к качественной работе. Мы занимаемся обработкой металла различной сложности, используя
-                    передовые технологии и высокоточное оборудование. Наш приоритет - это удовлетворение потребностей
-                    клиентов и достижение самых амбициозных целей в сфере производства. Мы гордимся нашей репутацией
-                    надежного и ответственного партнера, готового предложить индивидуальные решения для каждого
-                    заказчика. С нами ваш проект будет в надежных руках, а результат превзойдет ваши ожидания.
+                    Наша компания - это команда профессионалов в области:
+                    - металлообработки <br>
+                    - ремонта и производства гидроцилиндров <br>
+                    - изготовления деталей/комплектующих <br>
+                    - восстановлению подвижных и неподвижных соединений <br>
+                    Для специальной, строительной, лесозаготовительной, сельскохозяйственной и коммунальной техники. С
+                    богатым опытом и стремлением к качественной работе. Мы занимаемся обработкой металла различной
+                    сложности, используя передовые технологии и высокоточное оборудование. Наш приоритет - это
+                    удовлетворение потребностей клиентов и достижение самых амбициозных целей в нашей сфере. Мы гордимся
+                    нашей репутацией надежного и ответственного партнера, готового предложить индивидуальные решения для
+                    каждого заказчика. С нами ваша техника будет в надежных руках, а результат превзойдет ваши ожидания.
                 </p>
 
-                <span class="num-wrap">
+                <!-- <span class="num-wrap">
                     <div class="num">
                         <div class="num-1">24</div>
                         <p>года успешной работы</p>
@@ -250,7 +292,7 @@
 
                 <a href="">
                     Подробнее
-                </a>
+                </a> -->
             </div>
         </section>
 
@@ -281,12 +323,18 @@
             <div class="slider-wrap wrap">
                 <div class="uslugi-list wrap">
                     <div class="item">
-                        <div class="img"></div>
+                        <div class="img" style="background: url(src/img/remont-gidroczilindrov.jpg) center center/cover no-repeat;"></div>
 
                         <div class="wrap">
-                            <p class="title">Резка металла</p>
-                            <p class="descr">Наши квалифицированные сварщики выполняют сварочные работы любой сложности
-                                с высокой точностью и профессионализмом.</p>
+                            <p class="title">Ремонт гидроцилиндров</p>
+                            <p class="descr">
+                                Восстанавливаем рабочие поверхности гильз и штоков с продольными/радиальными царапинами,
+                                коррозийными раковинами глубиной до 300микрон. Ремонтируем посадки под уплотнительные
+                                элементы с соблюдением зазоров для разных сфер эксплуатации гидроцилиндров.
+                                Изготавливаем детали по образцу. Выполняем замену уплотнительных элементов высокого
+                                качества - продлевающих срок эксплуатации гидроцилиндров. Восстанавливаем отверстия в
+                                проушинах.
+                            </p>
                             <a href="">
                                 <button class="btn">Заказать</button>
                             </a>
@@ -294,12 +342,13 @@
                     </div>
 
                     <div class="item">
-                        <div class="img"></div>
+                        <div class="img" style="background: url(src/img/metalloobrabotka.jpg.jpg) center center/cover no-repeat;"></div>
 
                         <div class="wrap">
-                            <p class="title">Резка 222222222</p>
-                            <p class="descr">Наши квалифицированные сварщики выполняют сварочные работы любой сложности
-                                с высокой точностью и профессионализмом.</p>
+                            <p class="title">Металлообработка</p>
+                            <p class="descr">
+                                Выполняем услуги по токарным и фрезерным работам, изготавливаем детали по образцам, эскизам и чертежам.
+                            </p>
                             <a href="">
                                 <button class="btn">Заказать</button>
                             </a>
@@ -307,12 +356,15 @@
                     </div>
 
                     <div class="item">
-                        <div class="img"></div>
+                        <div class="img" style="background: url(src/img/vosstanovlenie-soedinenij.jpg) center center/cover no-repeat;"></div>
 
                         <div class="wrap">
-                            <p class="title">Резка 33333333</p>
-                            <p class="descr">Наши квалифицированные сварщики выполняют сварочные работы любой сложности
-                                с высокой точностью и профессионализмом.</p>
+                            <p class="title">Восстановление подвижных и не подвижных соединений</p>
+                            <p class="descr">
+                                Растачиваем и восстанавливаем:
+                                -изношенные отверстия спецтехники (проушины ковшей экскаваторов, рукоятей стрел манипуляторов, посадочных мест под подшипники и пр.) <br>
+                                -цилиндрические отверстия и наружные цилиндрические поверхности различной спецтехники, машин, механизмов, и оборудования.
+                            </p>
                             <a href="">
                                 <button class="btn">Заказать</button>
                             </a>
@@ -320,25 +372,14 @@
                     </div>
 
                     <div class="item">
-                        <div class="img"></div>
+                        <div class="img" style="background: url(src/img/podbor-gidravlicheskikh-uplotnenij.jpg) center center/cover no-repeat;"></div>
 
                         <div class="wrap">
-                            <p class="title">Резка 44444444</p>
-                            <p class="descr">Наши квалифицированные сварщики выполняют сварочные работы любой сложности
-                                с высокой точностью и профессионализмом.</p>
-                            <a href="">
-                                <button class="btn">Заказать</button>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="img"></div>
-
-                        <div class="wrap">
-                            <p class="title">Резка 55555</p>
-                            <p class="descr">Наши квалифицированные сварщики выполняют сварочные работы любой сложности
-                                с высокой точностью и профессионализмом.</p>
+                            <p class="title">Подбор гидравлических уплотнений</p>
+                            <p class="descr">
+                                Осуществляем демонтаж/подбор/монтаж/продажу  гидравлических уплотнений(уплотнения штока, уплотнения поршня, 
+                                резиновые кольца, грязесъёмники) по образцам, деталям, режимам эксплуатации для любой спец. техники.
+                            </p>
                             <a href="">
                                 <button class="btn">Заказать</button>
                             </a>
@@ -496,9 +537,7 @@
                         вам разобраться в деталях, рассчитают стоимость и подберут оптимальное
                         решение.
                     </p>
-                    <a href="">
-                        <button class="screen-btn btn contact-btn">Оставить заявку</button>
-                    </a>
+                    <button class="screen-btn btn contact-btn openModalBtn">Оставить заявку</button>
                 </div>
                 <div class="right">
                     <span class="item-wrap">
@@ -516,7 +555,7 @@
                                 Мы находимся:
                             </p>
                             <address>
-                                г. Москва, ул. Ленинская, дом 0, корп 0, офис 0
+                                г. Минск, ул. Бабушкина, дом 48Д
                             </address>
                         </span>
                     </span>
@@ -535,7 +574,7 @@
                             <p class="contact-text">
                                 Звоните нам:
                             </p>
-                            <a class="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+                            <a class="phone" href="tel:+375291511051">+375 (29) 151-10-51</a>
                         </span>
                     </span>
                 </div>
@@ -595,83 +634,54 @@
 
     <footer class="wrap footer">
         <div class="item">
-            <p class="footer-title">Заголовок</p>
-            <a class="link" href="">
-                <p>asdfasdf</p>
+            <p class="footer-title">Информация</p>
+            <a class="link" href="/soglahene.html">
+                <p>Пользовательское оглашение</p>
             </a>
 
-            <a class="link" href="">
-                <p>asdfasdf</p>
-            </a>
-
-            <a class="link" href="">
-                <p>asdfasdf</p>
-            </a>
-            
-            <a class="link" href="">
-                <p>asdfasdf</p>
+            <a class="link" href="novosti.html">
+                <p>Статьи</p>
             </a>
         </div>
 
         <div class="item">
-            <p class="footer-title">Заголовок</p>
-            <a class="link" href="">
-                <p>asdfasdf</p>
+            <p class="footer-title">Контакты</p>
+            <a class="link" href="+375291511051">
+                <p>+375 (29) 151-10-51</p>
             </a>
 
-            <a class="link" href="">
-                <p>asdfasdf</p>
+            <a class="link" href="mailto:engineer@alfasteel.by">
+                <p>engineer@alfasteel.by</p>
             </a>
 
-            <a class="link" href="">
-                <p>asdfasdf</p>
-            </a>
-            
-            <a class="link" href="">
-                <p>asdfasdf</p>
-            </a>
+            <p>
+                г. Минск, ул. Бабушкина, дом 48Д
+            </p>
         </div>
 
         <div class="item">
-            <p class="footer-title">Заголовок</p>
-            <a class="link" href="">
-                <p>asdfasdf</p>
+            <p class="footer-title">Услуги</p>
+            <a class="link" href="usluga-remont.html">
+                <p>Ремонт гидроцилиндров</p>
             </a>
 
-            <a class="link" href="">
-                <p>asdfasdf</p>
+            <a class="link" href="usluga-metalloobrabotka.html">
+                <p>Металлообработка</p>
             </a>
 
-            <a class="link" href="">
-                <p>asdfasdf</p>
-            </a>
-            
-            <a class="link" href="">
-                <p>asdfasdf</p>
-            </a>
-        </div>
-
-        <div class="item">
-            <p class="footer-title">Заголовок</p>
-            <a class="link" href="">
-                <p>asdfasdf</p>
+            <a class="link" href="uslugi-vosstanovlenie.html">
+                <p>Восстановление подвижных и не подвижных соединений</p>
             </a>
 
-            <a class="link" href="">
-                <p>asdfasdf</p>
-            </a>
-
-            <a class="link" href="">
-                <p>asdfasdf</p>
-            </a>
-            
-            <a class="link" href="">
-                <p>asdfasdf</p>
+            <a class="link" href="uslugi-podbor.html">
+                <p>Подбор гидравлических уплотнений</p>
             </a>
         </div>
     </footer>
 
     <script src="src/js/script.js"></script>
+    <script src="src/js/mobile.js"></script>
+    <script src="src/js/maskedinput.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" href="src/img/alfa-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/uslugi.css">
+
+    <title>Document</title>
+</head>
+
+<div class="menu-btn">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<!-- Модальное окно -->
+<div class="modal" id="modal">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__content" id="modalContent">
+        <button class="modal__close" id="closeModalBtn">&times;</button>
+        <h2>Отправить заявку</h2>
+        <p>Оставьте заявку и наши менеджеры свяжутся с вами в течение 10 минут</p>
+        <form>
+            <input type="text" placeholder="Ваше имя:" name="name">
+            <input type="tel" placeholder="Телефон *" name="phone" required>
+            <div class="modal__checkbox">
+                <input type="checkbox" id="agree" required>
+                <label for="agree">Ознакомлен с <a href="#">пользовательским соглашением</a></label>
+            </div>
+            <button type="submit" class="modal__submit">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .sogl h2 {
+        margin: 20px 0;
+    }
+</style>
+
+<body>
+    <header class="wrap header-mob">
+        <span class="item-list">
+            <span class="item-wrap">
+                <div class="logo-wrap">
+                    <img src="src/img/alfa-logo.png" alt="">
+                </div>
+                <span style="display: flex; align-items: center;">
+                    <!-- <p>
+                        АльфаСпецСталь
+                    </p> -->
+                    <p>
+                        Точность в каждой детали
+                    </p>
+                </span>
+            </span>
+
+            <span class="item-wrap">
+                <span class="icon-wrap">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.orsrc/2000/svg">
+                        <path
+                            d="M20 29C20 29 28 22.28 28 17.39C28 13.53 24.42 11 20 11C15.58 11 12 13.53 12 17.39C12 22.28 20 29 20 29Z"
+                            stroke="white" stroke-width="2" />
+                        <circle cx="20" cy="17.5" r="2.5" stroke="white" stroke-width="2" />
+                    </svg>
+                </span>
+                <span>
+                    <p class="contact-text">
+                        Мы находимся:
+                    </p>
+                    <address>
+                        г. Минск, ул. Бабушкина, дом 48Д
+                    </address>
+                </span>
+            </span>
+
+            <span class="item-wrap">
+                <span class="icon-wrap">
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                    </svg>
+
+                </span>
+                <span>
+                    <!-- <p class="contact-text">
+                        Звоните нам:
+                    </p> -->
+                    <a class="phone" href="tel:+375291511051">+375 (29) 151-10-51</a>
+                    <a class="phone" style="display: block;"
+                        href="mailto:engineer@alfasteel.by">engineer@alfasteel.by</a>
+                </span>
+            </span>
+        </span>
+
+        <nav>
+            <ul class="menu-list">
+                <li>
+                    <a href="/">
+                        Главная
+                    </a>
+                </li>
+
+                <li>
+                    <details>
+                        <summary>Услуги</summary>
+                        <ul id="accorderon">
+                            <li>
+                                <a href="uslugi.html">Все услуги</a>
+                            </li>
+                            <li>
+                                <a href="usluga-remont.html">Ремонт гидроцилиндров</a>
+                            </li>
+                            <li>
+                                <a href="usluga-metalloobrabotka.html">Металлообработка</a>
+                            </li>
+                            <li>
+                                <a href="uslugi-vosstanovlenie.html">Восстановление подвижных и не подвижных
+                                    соединений</a>
+                            </li>
+                            <li>
+                                <a href="uslugi-podbor.html">Подбор гидравлических уплотнений</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <a href="">
+                        Наши работы
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        О компании
+                    </a>
+                </li>
+
+                <li>
+                    <a href="novosti.html">
+                        Новости
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrap crumbs">
+        <a href="/index.html">Главная</a>
+        <span>/</span>
+        <p>Пользовательское соглашение</p>
+    </div>
+
+    <main class="wrap" style="margin-bottom: 30px;">
+        <h1>Пользовательское соглашение</h1>
+
+        <section class="sogl">
+            <h2>1. Общие положения</h2>
+            <ul>
+                <li>1.1. Настоящее соглашение (далее — Соглашение) определяет правила использования сайта [название
+                    сайта/компании], условия обработки персональных данных, а также права и обязанности
+                    пользователей и
+                    администрации сайта.</li>
+                <li>1.2. Соглашение является публичной офертой в соответствии с Гражданским кодексом Республики
+                    Беларусь.
+                    Совершая действия (отправка заявки, посещение сайта), пользователь подтверждает ознакомление и
+                    согласие
+                    с условиями, изложенными в настоящем Соглашении.</li>
+                <li>1.3. В случае несогласия с условиями пользователь обязан прекратить использование сайта.</li>
+            </ul>
+
+            <h2>2. Обработка персональных данных</h2>
+            <ul>
+                <li>2.1. При заполнении формы заявки пользователь добровольно предоставляет свои персональные данные
+                    (имя,
+                    телефон и иные сведения).</li>
+                <li>2.2. Персональные данные используются администрацией сайта исключительно для обратной связи,
+                    обработки
+                    заявки, исполнения обязательств перед пользователем, и не передаются третьим лицам, кроме
+                    случаев,
+                    предусмотренных законодательством Республики Беларусь.</li>
+                <li>2.3. Пользователь дает согласие на обработку персональных данных, включая сбор, хранение,
+                    уточнение,
+                    использование и уничтожение, в соответствии с Законом Республики Беларусь «О защите персональных
+                    данных».</li>
+            </ul>
+
+            <h2>3. Права и обязанности сторон</h2>
+            <ul>
+                <li>3.1. Администрация вправе изменять условия Соглашения и правила пользования сайтом, публикуя
+                    обновленный
+                    текст на сайте.</li>
+                <li>3.2. Пользователь обязуется предоставлять точную информацию при заполнении форм, не нарушать
+                    работу
+                    сайта, уважать права иных пользователей.</li>
+                <li>3.3. Пользователь не вправе размещать на сайте информацию, запрещенную законодательством
+                    Республики
+                    Беларусь, а также использовать сайт для рассылки рекламы без согласия администрации.</li>
+            </ul>
+
+            <h2>4. Ответственность и ограничения</h2>
+            <ul>
+                <li>4.1. Администрация не несет ответственности за временные сбои в работе сайта и за действия
+                    пользователей, не соответствующие настоящему Соглашению.</li>
+                <li>4.2. Пользователь несет полную ответственность за корректность предоставленных данных.</li>
+                <li>4.3. Вся информация сайта носит исключительно справочный характер.</li>
+            </ul>
+
+            <h2>5. Заключительные положения</h2>
+            <ul>
+                <li>5.1. К отношениям, возникающим из настоящего Соглашения, применяется законодательство Республики
+                    Беларусь.</li>
+                <li>5.2. Соглашение вступает в силу с момента акцепта пользователем и действует до момента
+                    прекращения
+                    использования сайта.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="wrap footer">
+        <div class="item">
+            <p class="footer-title">Информация</p>
+            <a class="link" href="soglahene.html">
+                <p>Пользовательское оглашение</p>
+            </a>
+
+            <a class="link" href="novosti.html">
+                <p>Статьи</p>
+            </a>
+        </div>
+
+        <div class="item">
+            <p class="footer-title">Контакты</p>
+            <a class="link" href="+375291511051">
+                <p>+375 (29) 151-10-51</p>
+            </a>
+
+            <a class="link" href="mailto:engineer@alfasteel.by">
+                <p>engineer@alfasteel.by</p>
+            </a>
+
+            <p>
+                г. Минск, ул. Бабушкина, дом 48Д
+            </p>
+        </div>
+
+        <div class="item">
+            <p class="footer-title">Услуги</p>
+            <a class="link" href="usluga-remont.html">
+                <p>Ремонт гидроцилиндров</p>
+            </a>
+
+            <a class="link" href="usluga-metalloobrabotka.html">
+                <p>Металлообработка</p>
+            </a>
+
+            <a class="link" href="uslugi-vosstanovlenie.html">
+                <p>Восстановление подвижных и не подвижных соединений</p>
+            </a>
+
+            <a class="link" href="uslugi-podbor.html">
+                <p>Подбор гидравлических уплотнений</p>
+            </a>
+        </div>
+    </footer>
+
+    <script src="src/js/script.js"></script>
+    <script src="src/js/mobile.js"></script>
+    <script src="src/js/maskedinput.js"></script>
+</body>
+
+</html>

@@ -6,6 +6,122 @@
     text-decoration: none;
 }
 
+html {
+    background: #000;
+}
+
+.title-accent.font-size {
+    font-size: 17px;
+}
+
+.wrap.crumbs {
+    font-size: 20px;
+    margin: 20px 0;
+    display: flex;
+}
+
+.crumbs span {
+    margin: 0 5px;
+}
+
+/* Стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(25, 18, 40, 0.65);
+}
+
+.modal__content {
+  position: relative;
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px 32px;
+  max-width: 400px;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0 8px 32px rgba(36, 6, 110, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal__close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  background: var(--color-title);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal__content h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.modal__content p {
+  color: #8890a6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input[type="text"], input[type="tel"] {
+  padding: 16px 12px;
+  border-radius: 32px;
+  border: 1px solid #e2e5f1;
+  font-size: 1rem;
+  outline: none;
+}
+
+.modal__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.modal__submit {
+  background: var(--color-title);
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 40px;
+  padding: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.modal__submit:hover {
+  background: var(--color-title);
+}
+
+
+
 :root {
     --color-text: #878786;
     --color-title: #e64011;
@@ -14,6 +130,8 @@
 }
 
 body {
+    max-width: 1440px;
+    margin: 0 auto;
     background: #efeff0;
 }
 
@@ -305,7 +423,7 @@ details[open] #accorderon {
 .screen {
     position: relative;
     width: 100%;
-    min-width: 100dvw;
+    min-width: 100%;
     height: 120dvh;
     background: url(../img/bg-2.png) center center / cover no-repeat;
     background: url(../img/bg.png) center center / cover no-repeat;
@@ -314,7 +432,7 @@ details[open] #accorderon {
 }
 
 .screen-text {
-    width: 50%;
+    width: 70%;
     margin-top: 50px;
     position: relative;
     z-index: 10;
@@ -329,10 +447,12 @@ details[open] #accorderon {
 .title-main {
   margin-top: 20px;
   display: block;
+  display: inline;
   font-family: 'play-b', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 55px;
+  font-size: 40px;
   /* color: #fff; */
   color: var(--color-bg);
   text-shadow: 4px 4px 0 #191322; /* Темная тень сзади */
@@ -340,12 +460,14 @@ details[open] #accorderon {
 }
 
 .title-outline {
+  display: inline;
   margin-right: 10px;
   float: left;
   font-family: 'play-b', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 55px;
+  font-size: 40px;
   color: transparent;
   -webkit-text-stroke: 3px var(--color-bg); /* Белая обводка */
   text-stroke: 3px var(--color-bg); /* Для совместимости */
@@ -353,15 +475,18 @@ details[open] #accorderon {
 }
 
 .title-accent {
+  display: inline;
   font-family: 'play-b', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 55px;
+  font-size: 40px;
   color: var(--color-title); /* Фиолетовый акцент */
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .screen-descr {
+    width: 70%;
     font-weight: 400;
     font-family: Rubik, sans-serif;
     line-height: 30px;
@@ -391,7 +516,7 @@ details[open] #accorderon {
 .perks {
     position: relative;
     width: 100%;
-    height: 575px;
+    height: 710px;
 }
 
 .perks h2 {
@@ -474,6 +599,12 @@ details[open] #accorderon {
     color: var(--color-text);
 }
 
+.perks-descr-sub {
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--color-text);
+}
+
 /* ПРЕИМУЩЕСТВА */
 
 
@@ -539,7 +670,7 @@ details[open] #accorderon {
 
 .uslugi .wrap {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     gap: 30px;
     margin: 50px auto 0 auto;
@@ -864,7 +995,7 @@ details[open] #accorderon {
     color: var(--color-title);
 }
 
-footer .link {
+footer .link, footer p {
     display: block;
     margin-top: 10px;
     color: var(--color-text);
@@ -1010,6 +1141,7 @@ footer .link:hover {
 
     .slider-wrap .wrap {
         margin: 0;
+        padding: 0;
         flex-direction: column;
     }
 
@@ -1026,7 +1158,7 @@ footer .link:hover {
     }
 
     .review {
-        width: calc(100% - 40px);
+        width: calc(100% - 20px);
     }
 
     .review-wrap .item {
@@ -1046,7 +1178,7 @@ footer .link:hover {
     }
 
     .contact {
-        width: calc(100% - 40px);
+        width: calc(100% - 20px);
     }
 
     .contact-title {
@@ -1063,7 +1195,7 @@ footer .link:hover {
     }
 
     .faq.wrap {
-        justify-content: center;
+        justify-content: start;
     }
 
     .faq-text {
@@ -1071,7 +1203,7 @@ footer .link:hover {
     }
 
     .footer {
-        width: calc(100% - 40px);
+        width: calc(100% - 20px);
         flex-wrap: wrap;
         padding: 20px 10px;
     }
