@@ -130,7 +130,6 @@ input[type="text"], input[type="tel"] {
 }
 
 body {
-    max-width: 1440px;
     margin: 0 auto;
     background: #efeff0;
 }
@@ -425,6 +424,7 @@ details[open] #accorderon {
     width: 100%;
     min-width: 100%;
     height: 120dvh;
+    height: 900px;
     background: url(../img/bg-2.png) center center / cover no-repeat;
     background: url(../img/bg.png) center center / cover no-repeat;
     margin-top: -200px;
@@ -452,7 +452,7 @@ details[open] #accorderon {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 55px;
-  font-size: 40px;
+  font-size: 50px;
   /* color: #fff; */
   color: var(--color-bg);
   text-shadow: 4px 4px 0 #191322; /* Темная тень сзади */
@@ -462,15 +462,14 @@ details[open] #accorderon {
 .title-outline {
   display: inline;
   margin-right: 10px;
-  float: left;
   font-family: 'play-b', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 55px;
-  font-size: 40px;
+  font-size: 50px;
   color: transparent;
-  -webkit-text-stroke: 3px var(--color-bg); /* Белая обводка */
-  text-stroke: 3px var(--color-bg); /* Для совместимости */
+  -webkit-text-stroke: 1px var(--color-bg); /* Белая обводка */
+  text-stroke: 1px var(--color-bg); /* Для совместимости */
   letter-spacing: 2px;
 }
 
@@ -480,7 +479,7 @@ details[open] #accorderon {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 55px;
-  font-size: 40px;
+  font-size: 50px;
   color: var(--color-title); /* Фиолетовый акцент */
   /* margin-left: 20px; */
 }
@@ -567,8 +566,8 @@ details[open] #accorderon {
     text-transform: uppercase;
     font-size: 55px;
     color: transparent;
-    -webkit-text-stroke: 3px var(--color-title);
-    text-stroke: 3px var(--color-title);
+    -webkit-text-stroke: 1px var(--color-title);
+    text-stroke: 1px var(--color-title);
     letter-spacing: 2px;
 }
 
@@ -697,6 +696,8 @@ details[open] #accorderon {
 }
 
 .uslugi-list .item {
+    position: relative;
+    padding-bottom: 83px;
     width: 33%;
     width: calc(33.333% - 20px); /* Учитываем gap */
     flex-shrink: 0;
@@ -727,6 +728,12 @@ details[open] #accorderon {
     font-size: 20px;
     font-weight: 700;
     padding: 20px;
+}
+
+.uslugi-list .item .btn-link {
+    margin-top: 20px;
+    position: absolute;
+    bottom: 20px;
 }
 
 .prev:disabled,
@@ -864,6 +871,7 @@ details[open] #accorderon {
     cursor: pointer;
     outline: none;
     transition: color 0.2s;
+    color: #000;
 }
 
 .faq-question:hover,
@@ -1021,7 +1029,8 @@ footer .link:hover {
     }
 
     .header-mob {
-        padding: 10px;
+        /* padding: 10px; */
+        margin-top: 20px;
     }
 
     header .item-list {
@@ -1075,7 +1084,7 @@ footer .link:hover {
 
     .title-outline {
         font-size: 25px;
-        -webkit-text-stroke: 1px var(--color-bg);
+        /* -webkit-text-stroke: 1px var(--color-bg); */
         text-stroke: 1px var(--color-bg);
     }
 
