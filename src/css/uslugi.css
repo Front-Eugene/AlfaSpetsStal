@@ -17,6 +17,20 @@ h1 {
     color: #262626;
 }
 
+h2 {
+    margin: 20px 0;
+}
+
+.uslugi-list {
+    list-style-type: circle;
+    display: block;
+    margin: 20px 0 20px 15px;
+}
+
+.uslugi-list li {
+    margin: 15px 0;
+}
+
 .usluga-item {
     width: 50%;
     margin-bottom: 20px;
@@ -46,7 +60,16 @@ h1 {
 
 
 @media (max-width: 800px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
     .usluga-item {
+        width: 100%;
+    }
+
+    .article-card {
         width: 100%;
     }
 }
