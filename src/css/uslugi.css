@@ -59,6 +59,38 @@ h2 {
 }
 
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Arial', sans-serif;
+  margin: 20px auto;
+}
+
+thead tr {
+  background-color: #e64011; /* темно-синий фон шапки */
+  color: #ffffff; /* белый цвет текста */
+  text-align: left;
+}
+
+thead th, tbody td {
+  padding: 5px;
+  border: 1px solid #717171; /* светло-голубые границы */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e9f1fb; /* светло-голубая полоска для четных строк */
+}
+
+tbody tr:hover {
+  background-color: #c3d6f4; /* более яркий голубой при наведении */
+}
+
+tbody td {
+  color: #333333; /* темно-серый текст */
+  font-size: 14px;
+}
+
+
 @media (max-width: 800px) {
 
     h1 {
@@ -71,5 +103,9 @@ h2 {
 
     .article-card {
         width: 100%;
+    }
+
+    tbody td {
+        font-size: 11px;
     }
 }
