@@ -624,6 +624,7 @@ details[open] #accorderon {
 .about {
     display: flex;
     gap: 30px;
+    margin-top: 50px;
 }
 
 .about h2 {
