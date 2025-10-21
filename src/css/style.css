@@ -12,6 +12,7 @@ html {
 
 .title-accent.font-size {
     font-size: 17px;
+    font-size: 30px;
 }
 
 .wrap.crumbs {
@@ -333,12 +334,12 @@ nav ul li a {
     line-height: 30px;
     font-family: 'play-b', sans-serif;
     color: var(--color-bg);
-    text-shadow: 2px 2px 0 #191322;
+    /* text-shadow: 2px 2px 0 #191322; */
 }
 
-.item-wrap .phone:hover {
+/* .item-wrap .phone:hover {
     color: var(--color-title);
-}
+} */
 
 #accorderon {
     margin: 30px 0;
@@ -495,17 +496,27 @@ details[open] #accorderon {
 }
 
 
-.screen-btn {
+/* .screen-btn {
     padding: 25px 50px;
     font-size: 25px;
     font-family: 'play-b', sans-serif;
     font-weight: 900;
+} */
+
+.btn-wrap {
+    margin-top: 20px;
+}
+
+.screen-btn {
+    padding: 15px 25px;
+    font-size: 20px;
+    font-family: 'play-b', sans-serif;
 }
 
 .btn-more {
     margin-left: 20px;
-    background: var(--color-bg);
-    color: var(--color-title);
+    /* background: var(--color-bg);
+    color: var(--color-title); */
 }
 
 /* ГЛАВНЫЙ ЭКРАН */
