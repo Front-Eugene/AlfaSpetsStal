@@ -457,7 +457,7 @@ details[open] #accorderon {
   font-size: 50px;
   /* color: #fff; */
   color: var(--color-bg);
-  text-shadow: 4px 4px 0 #191322; /* Темная тень сзади */
+  /* text-shadow: 4px 4px 0 #191322; */
   letter-spacing: 2px;
 }
 
@@ -1056,7 +1056,7 @@ footer .link:hover {
 
     .screen {
         padding: 200px 10px 0 10px;
-        margin-top: -270px;
+        margin-top: -310px;
     }
 
     nav ul {
@@ -1088,10 +1088,15 @@ footer .link:hover {
 
     .screen-text {
         width: 100%;
+        margin-top: 90px;
     }
 
     .title-main, .title-accent {
         font-size: 25px;
+    }
+
+    .title-accent.font-size {
+        font-size: 20px;
     }
 
     .title-outline {
@@ -1117,6 +1122,14 @@ footer .link:hover {
         font-size: 20px;
         font-weight: 400;
     }
+
+    .mobile-header-contact {
+        margin: 0;
+        margin-bottom: 40px;
+        padding: 0;
+        background: none;
+    }
+
 
     .perks-wrap {
         width: calc(100% - 20px);
